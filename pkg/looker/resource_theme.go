@@ -29,16 +29,19 @@ func resourceTheme() *schema.Resource {
 				Type:        schema.TypeBool,
 				Description: "Only an active theme with no expiration (end_at not set) can be assigned as the default theme. As long as a theme has an active record with no expiration, it can be set as the default.",
 				Optional:    true,
+				Default:     false,
 			},
 			"background_color": {
 				Type:        schema.TypeString,
 				Description: "Default background color",
 				Optional:    true,
+				Default:     "#f6f8fa",
 			},
 			"base_font_size": {
 				Type:        schema.TypeString,
 				Description: "Base font size for scaling fonts",
 				Optional:    true,
+				Default:     "12px",
 			},
 			"color_collection_id": {
 				Type:        schema.TypeString,
@@ -49,11 +52,13 @@ func resourceTheme() *schema.Resource {
 				Type:        schema.TypeString,
 				Description: "Default font color",
 				Optional:    true,
+				Default:     "#3e3f40",
 			},
 			"font_family": {
 				Type:        schema.TypeString,
 				Description: "Primary font family",
 				Optional:    true,
+				Default:     "Roboto, 'Noto Sans', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 'Noto Sans Hebrew', 'Noto Sans Thai UI', Helvetica, Arial, sans-serif",
 			},
 			"font_source": {
 				Type:        schema.TypeString,
@@ -64,21 +69,25 @@ func resourceTheme() *schema.Resource {
 				Type:        schema.TypeString,
 				Description: "Info button color",
 				Optional:    true,
+				Default:     "#0087e1",
 			},
 			"primary_button_color": {
 				Type:        schema.TypeString,
 				Description: "Primary button color",
 				Optional:    true,
+				Default:     "#1A73E8",
 			},
 			"show_filters_bar": {
 				Type:        schema.TypeBool,
 				Description: "Toggle to show filters. Defaults to true",
 				Optional:    true,
+				Default:     true,
 			},
 			"show_title": {
 				Type:        schema.TypeBool,
 				Description: "Togle to show the title. Defaults to true",
 				Optional:    true,
+				Default:     true,
 			},
 			"text_tile_text_color": {
 				Type:        schema.TypeString,
@@ -89,26 +98,31 @@ func resourceTheme() *schema.Resource {
 				Type:        schema.TypeString,
 				Description: "Background color for tiles",
 				Optional:    true,
+				Default:     "#ffffff",
 			},
 			"tile_text_color": {
 				Type:        schema.TypeString,
 				Description: "text color for tiles",
 				Optional:    true,
+				Default:     "#3a4245",
 			},
 			"title_color": {
 				Type:        schema.TypeString,
 				Description: "Color for titles",
 				Optional:    true,
+				Default:     "#3a4245",
 			},
 			"warn_button_color": {
 				Type:        schema.TypeString,
 				Description: "Warning button color",
 				Optional:    true,
+				Default:     "#980c11",
 			},
 			"tile_title_alignment": {
 				Type:        schema.TypeString,
 				Description: "The text alignment of tile titles (New Dashboards)",
 				Optional:    true,
+				Default:     "center",
 			},
 			"tile_shadow": {
 				Type:        schema.TypeBool,
