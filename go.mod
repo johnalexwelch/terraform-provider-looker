@@ -13,7 +13,7 @@ require (
 	github.com/mitchellh/mapstructure v1.3.3 // indirect
 	github.com/posener/complete v1.2.1 // indirect
 	github.com/smartystreets/goconvey v1.6.4 // indirect
-	golang.org/x/tools v0.0.0-20201028111035-eafbe7b904eb // indirect
+	golang.org/x/tools v0.1.0 // indirect
 	google.golang.org/api v0.34.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776 // indirect
 )

@@ -80,6 +80,7 @@ func Provider() *schema.Provider {
 			"looker_project_git_repo":       resourceProjectGitRepo(),
 			"looker_connection":             resourceConnection(),
 			"looker_lookml_model":           resourceLookMLModel(),
+			"looker_theme":                  resourceTheme(),
 		},
 		ConfigureContextFunc: providerConfigure,
 	}

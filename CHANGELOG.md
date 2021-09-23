@@ -6,3 +6,4 @@
 - looker_project_git_repo
 - looker_connection
 - looker_lookml_model
+- looker_theme
