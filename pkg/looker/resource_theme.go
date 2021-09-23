@@ -370,14 +370,6 @@ func getThemeSettings(d *schema.ResourceData) *apiclient.ThemeSettings {
 		themeSettings.PrimaryButtonColor = &setting
 	}
 
-	showFiltersBar := d.Get("show_filters_bar")
-	showFiltersBarBool := showFiltersBar.(bool)
-	themeSettings.ShowFiltersBar = &showFiltersBarBool
-
-	showTitle := d.Get("show_title")
-	showTitleBool := showTitle.(bool)
-	themeSettings.ShowTitle = &showTitleBool
-
 	if textTileTextColor, ok := d.GetOk("text_tile_text_color"); ok {
 		setting := textTileTextColor.(string)
 		themeSettings.TextTileTextColor = &setting
@@ -408,10 +400,14 @@ func getThemeSettings(d *schema.ResourceData) *apiclient.ThemeSettings {
 		themeSettings.TileTitleAlignment = &setting
 	}
 
-	if tileShadow, ok := d.GetOk("tile_shadow"); ok {
-		setting := tileShadow.(bool)
-		themeSettings.TileShadow = &setting
-	}
+	tileShadow := d.Get("tile_shadow").(bool)
+	themeSettings.TileShadow = &tileShadow
+
+	showFiltersBar := d.Get("show_filters_bar").(bool)
+	themeSettings.ShowFiltersBar = &showFiltersBar
+
+	showTitle := d.Get("show_title").(bool)
+	themeSettings.ShowTitle = &showTitle
 
 	return themeSettings
 }
