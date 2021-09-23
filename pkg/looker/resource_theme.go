@@ -128,6 +128,7 @@ func resourceTheme() *schema.Resource {
 				Type:        schema.TypeBool,
 				Description: "Toggles the tile shadow (New Dashboards)",
 				Optional:    true,
+				Default:     true,
 			},
 		},
 	}
