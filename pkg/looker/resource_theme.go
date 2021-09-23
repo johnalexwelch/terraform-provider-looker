@@ -370,15 +370,13 @@ func getThemeSettings(d *schema.ResourceData) *apiclient.ThemeSettings {
 		themeSettings.PrimaryButtonColor = &setting
 	}
 
-	if showFiltersBar, ok := d.GetOk("show_filters_bar"); ok {
-		setting := showFiltersBar.(bool)
-		themeSettings.ShowFiltersBar = &setting
-	}
+	showFiltersBar := d.Get("show_filters_bar")
+	showFiltersBarBool := showFiltersBar.(bool)
+	themeSettings.ShowFiltersBar = &showFiltersBarBool
 
-	if showTitle, ok := d.GetOk("show_title"); ok {
-		setting := showTitle.(bool)
-		themeSettings.ShowTitle = &setting
-	}
+	showTitle := d.Get("show_title")
+	showTitleBool := showTitle.(bool)
+	themeSettings.ShowTitle = &showTitleBool
 
 	if textTileTextColor, ok := d.GetOk("text_tile_text_color"); ok {
 		setting := textTileTextColor.(string)
